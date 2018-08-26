@@ -12,7 +12,7 @@ const TwitterFeed = ({ tweets }) => {
   const tweet_ids = Object.keys(temp_tweets).map(key => temp_tweets[key])
   return (
     <div>
-    {tweet_ids.map(id => <TweetEmbed  id={id}/>)}
+    {tweet_ids.map(id => <TweetEmbed key={id} id={id}/>)}
     </div>
   )
 }
