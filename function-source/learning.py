@@ -7,7 +7,7 @@ import json
 def get_top_tweets(user):
     tweets = get_tweets("from:" + user)
     news = get_news()
-
+    
     scored_tweets = []
     for tweet in tweets:
         news.insert(0, tweet.text)
