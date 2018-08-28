@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Row, Col, Input, InputGroup, InputGroupAddon,  Button } from 'reactstrap'
+import { Row, Col  } from 'reactstrap'
 import './App.css';
 import TwitterFeed from './components/TwitterFeed'
-import AccountCard from './components/AccountCard'
+import SearchBar from './components/SearchBar'
 
 class App extends Component {
 
@@ -15,32 +15,14 @@ class App extends Component {
           <h4 style={{ color: 'white'}} >Tweets filtered by relevance to political headlines.</h4>
           </Col>
         </Row>
-
         <Row>
-        <Col style={{ marginLeft: 400, marginRight: 400, paddingTop: 30, paddingBottom: 30}}>
-          <InputGroup>
-            <InputGroupAddon addonType="prepend">@</InputGroupAddon>
-            <Input placeholder="username" />
-          </InputGroup>
-          <div style={{ paddingTop: 20 }}>
-          <Button  outline color="light">{"What's Hot?"}</Button>
-          </div>
-        </Col>
+          <SearchBar />
         </Row>
-
         <Row style={{justifyContent: 'center'}}>
           <Col>
-            <AccountCard name="Donald Trump" username="realDonaldTrump" position="U.S. President"/>
-          </Col>
-          <Col>
-          <TwitterFeed tweets={[]} />
-          </Col>
-          <Col>
-
+            <TwitterFeed tweets={[]} />
           </Col>
         </Row>
-
-
       </div>
     );
   }
