@@ -8,15 +8,20 @@ class SearchBar extends React.Component {
     user: ''
   }
 
+  handleClick = async () => {
+    await this.props.getTweets(this.state.user)
+    this.setState({ user: ''})
+  }
+
   render() {
     return (
-      <Col style={{ marginLeft: 800, marginRight: 800, paddingTop: 30, paddingBottom: 30}}>
+      <Col style={{ marginLeft: 400, marginRight: 400, paddingTop: 30, paddingBottom: 30}}>
         <InputGroup>
           <InputGroupAddon addonType="prepend">@</InputGroupAddon>
           <Input value={this.state.user} onChange={e => this.setState({ user: e.target.value })} placeholder="username" />
         </InputGroup>
         <div style={{ paddingTop: 20 }}>
-        <Button  outline color="light">{"What's Hot?"}</Button>
+        <Button onClick={this.handleClick} outline color="light">{"What's Hot?"}</Button>
         </div>
       </Col>
     )
@@ -24,13 +29,11 @@ class SearchBar extends React.Component {
 }
 
 
-const mapStateToProps = ({ tweets }) => ({ tweets });
-
 const mapDispatchToProps = {
   getTweets
 };
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(SearchBar)

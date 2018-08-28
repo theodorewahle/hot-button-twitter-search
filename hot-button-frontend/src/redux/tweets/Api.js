@@ -6,7 +6,7 @@ export const getTweets = user => async dispatch => {
     dispatch({ type: GET_TWEETS });
     const url = "https://us-east1-hot-button-twitter-search.cloudfunctions.net/sorted-tweets-1"
     const response = await axios.post(url, {user});
-    dispatch(getTweetsSuccess({ user, tweets: response.data }));
+    dispatch(getTweetsSuccess({ user, tweets: response.data.tweets }));
   } catch (e) {
     console.log(e);
     dispatch(getTweetsFail(e));
