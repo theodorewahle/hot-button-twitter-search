@@ -15,7 +15,7 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <Col style={{ marginLeft: 400, marginRight: 400, paddingTop: 30, paddingBottom: 30}}>
+      <Col xs="6" md="5" lg="4" xl="3" style={{ paddingTop: 30, paddingBottom: 30}}>
         <InputGroup>
           <InputGroupAddon addonType="prepend">@</InputGroupAddon>
           <Input value={this.state.user} onChange={e => this.setState({ user: e.target.value })} placeholder="username" />

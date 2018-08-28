@@ -19,7 +19,7 @@ class App extends Component {
           </Col>
         </Row>
 
-        <Row>
+        <Row style={{justifyContent: 'center'}}>
           <SearchBar />
         </Row>
 
@@ -35,6 +35,7 @@ class App extends Component {
 const styles = {
   appStyle: {
     minHeight: '100vh',
+    minWidth: '100vw',
     background: 'linear-gradient(to right, red, blue)'
   }
 }

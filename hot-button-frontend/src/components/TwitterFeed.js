@@ -1,11 +1,19 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import TweetEmbed from 'react-tweet-embed'
+import { Col } from 'reactstrap'
+import Loader from './Loader'
 
 class TwitterFeed  extends React.Component {
   render() {
-    const { tweets, user } = this.props.tweets
+    const { tweets, user, loading } = this.props.tweets
+    console.log(this.props.tweets)
     const tweet_ids = Object.keys(tweets).map(key => tweets[key])
+
+    if (loading) {
+      return <Loader color='white' loading={loading}/>
+    }
+
     if (tweets && user) {
       return (
         <div >

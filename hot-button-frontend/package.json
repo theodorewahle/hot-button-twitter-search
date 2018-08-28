@@ -9,6 +9,7 @@
     "react-dom": "^16.4.2",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.5",
+    "react-spinners": "^0.4.5",
     "react-tweet-embed": "^1.1.1",
     "reactstrap": "^6.4.0",
     "redux": "^4.0.0",
