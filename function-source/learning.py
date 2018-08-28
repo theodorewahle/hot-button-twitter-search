@@ -20,7 +20,8 @@ def get_top_tweets(user):
         scored_tweets.append(tweet)
     sorted_tweets = sorted(scored_tweets)
     top_ten_scored_tweet_ids = {}
-
-    for i in range(10):
-        top_ten_scored_tweet_ids[str(i)] = sorted_tweets[i].id
+    tweet_count = min(10, len(sorted_tweets))
+    for i in range(tweet_count):
+        if sorted_tweets[i].score > 1.5:
+        	top_ten_scored_tweet_ids[str(i)] = sorted_tweets[i].id
     return top_ten_scored_tweet_ids

@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Row, Col } from 'reactstrap'
 import TweetEmbed from 'react-tweet-embed'
-import { Col } from 'reactstrap'
 import Loader from './Loader'
 
 class TwitterFeed  extends React.Component {
@@ -16,10 +16,14 @@ class TwitterFeed  extends React.Component {
 
     if (tweets && user) {
       return (
-        <div >
+        <Row style={{ justifyContent: 'center'}}>
+          <Col style={{ alignItems: 'center'}}>
+          <Row style={{ justifyContent: 'center' }}>
           <h3 style={{ color: 'white' }}>Relevant Tweets from @{user}:</h3>
-          {tweet_ids.map(id => <TweetEmbed key={id} id={id}/>)}
-        </div>
+          </Row>
+          {tweet_ids.map(id => <Row style={{ justifyContent: 'center' }}><TweetEmbed key={id} id={id}/></Row>)}
+          </Col>
+        </Row>
       )
     }
 
