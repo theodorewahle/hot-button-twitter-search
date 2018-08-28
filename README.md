@@ -3,4 +3,4 @@ Hot Button is a new way to search Twitter. Hot Button scans news headlines to id
 
 Checkout the project here: https://hot-button-twitter-search.appspot.com/
 
-![alt text](https://ibb.co/hnEuv9)
+![Screenshot](https://preview.ibb.co/fNMJNp/Screen_Shot_2018_08_28_at_4_17_30_PM.png)
