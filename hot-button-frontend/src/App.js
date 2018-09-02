@@ -16,7 +16,7 @@ class App extends Component {
             <Row style={{justifyContent: 'center', alignItems: 'center'}}>
               <Col>
                 <h1 style={{ color: 'white', paddingTop:50}}>Hot Button: Politics</h1>
-                <h4 style={{ color: 'white'}} >Tweets filtered by relevance to political headlines.</h4>
+                <h4 style={{ color: 'white'}} >Search tweets and filter by relevance to political headlines.</h4>
               </Col>
             </Row>
             <Row style={{justifyContent: 'center'}}>
